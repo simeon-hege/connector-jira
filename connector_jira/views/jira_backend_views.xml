@@ -11,6 +11,7 @@
         <field name="model">jira.backend</field>
         <field name="arch" type="xml">
             <form string="Jira Backend">
+                <field name="state" invisible="1"/>
                 <header groups="connector.group_connector_manager">
                     <button
                         name="button_setup"

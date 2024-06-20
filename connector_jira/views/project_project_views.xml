@@ -90,7 +90,7 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project" />
         <field name="arch" type="xml">
-            <field name="name" position="before">
+            <field name="display_name" position="before">
                 <field name="jira_key" />
             </field>
         </field>
@@ -100,10 +100,10 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project_kanban" />
         <field name="arch" type="xml">
-            <field name="name" position="after">
+            <field name="display_name" position="after">
                 <field name="jira_key" />
             </field>
-            <xpath expr="//t[@t-esc='record.name.value']" position="before">
+            <xpath expr="//t[@t-esc='record.display_name.value']" position="before">
                 <span t-if="record.jira_key.value">
                     [
                     <t t-esc="record.jira_key.value" />
